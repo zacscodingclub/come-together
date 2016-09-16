@@ -27,6 +27,9 @@ html
             li: a(href='/contact/') Contact
           ul.nav.navbar-nav.navbar-right
             if user && user.username
+              li: a(href='/myevents')
+                i.fa.fa-calendar
+                | My Events
               li: a(href='/events/add')
                 i.fa.fa-plus
                 | Add Event
