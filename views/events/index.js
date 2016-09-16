@@ -89,7 +89,7 @@ exports.create = function(req, res, next) {
       res.location('/events');
       res.redirect('/events');
     });
-
-    workflow.emit('validate');
   });
+  
+  workflow.emit('validate');
 }
