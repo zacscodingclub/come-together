@@ -1,0 +1,32 @@
+extends ../../layouts/default
+
+block head
+  title #{event.name}
+
+block body
+  div.row
+    div.col-sm-8
+      div.page-header
+        h1 #{event.name}
+          small &nbsp; Posted by #{event.username}
+      ul.event-list.list-group
+        li.list-group-item
+          strong Venue:&nbsp;
+          | #{event.venue}
+        li.list-group-item
+          strong Date:&nbsp;
+          | #{event.date}
+        li.list-group-item
+          strong Start Time:&nbsp;
+          | #{event.startTime}
+        li.list-group-item
+          strong End Time:&nbsp;
+          | #{event.endTime}
+      p #{event.description}
+      p
+        i.fa.fa-arrow-circle-left
+        a(href='/events') Go Back
+
+    div.col-sm-4
+      div.page-header
+        h1 Sidebar
