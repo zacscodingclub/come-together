@@ -11,7 +11,6 @@ exports = module.exports = function(app, mongoose) {
     startTime: { type: String },
     endTime: { type: String },
     username: { type: String, required: true }
-    }
   });
 
   eventSchema.plugin(require('./plugins/pagedFind'));
